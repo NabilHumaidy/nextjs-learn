@@ -1,3 +1,12 @@
+import '@/app/ui/global.css';
+import { inter } from './ui/fonts';
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Acme',
+  description: 'Acme',
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
